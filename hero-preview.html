@@ -7,7 +7,7 @@
 <script>
 (function(){
   var part = new URLSearchParams(location.search).get('part');
-  if(['intro','cases','programme','info'].includes(part)){
+  if(['intro','advantages','cases','programme','info'].includes(part)){
     document.documentElement.dataset.part = part;
   }
   if(!part || part === 'intro'){
@@ -37,9 +37,11 @@ details summary{list-style:none}details summary::-webkit-details-marker{display:
 html[data-part] nav,html[data-part] #top,html[data-part] .float-book{display:none!important}
 html[data-part] .page-slice{display:none!important}
 html[data-part="intro"] .slice-intro,
+html[data-part="advantages"] .slice-advantages,
 html[data-part="cases"] .slice-cases,
 html[data-part="programme"] .slice-programme,
 html[data-part="info"] .slice-info{display:block!important}
+html[data-part="advantages"] body{background:var(--ST)}
 html[data-part="cases"] body{background:var(--F)}
 html[data-part="programme"] body{background:var(--ST)}
 html[data-part="info"] body{background:#fff}
@@ -642,7 +644,7 @@ footer{background:var(--FD);padding:56px 0 32px;text-align:center}
 </div>
 
 <!-- 三大核心優勢 -->
-<section id="features" class="sec page-slice slice-intro"><div class="container"><div class="center"><p class="sec-tag">Why Cofit</p><h2 class="sec-title">Cofit 控糖減重　三大核心優勢</h2><p class="sec-en">Over 100,000 kg of clinically achieved weight loss. Now serving in Hong Kong.</p></div>
+<section id="features" class="sec page-slice slice-advantages"><div class="container"><div class="center"><p class="sec-tag">Why Cofit</p><h2 class="sec-title">Cofit 控糖減重　三大核心優勢</h2><p class="sec-en">Over 100,000 kg of clinically achieved weight loss. Now serving in Hong Kong.</p></div>
 <div class="adv-list">
   <div class="adv-item"><div class="adv-ico"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M13 3C10.5 8 10.5 18 13 23M13 3C15.5 8 15.5 18 13 23"/><path d="M3 13h20M3.8 8.5h18.4M3.8 17.5h18.4"/></svg></div><div><div class="adv-title">國際認證<span class="en">Internationally Recognised &amp; Published</span></div><p class="adv-desc">台灣唯一榮登《Nutrients》國際營養學期刊（2024）的減重課程，以實證醫學為基礎，讓每一步都有科學依據。</p></div></div>
   <div class="adv-item"><div class="adv-ico"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="3"/><path d="M4 22v-4a5 5 0 0110 0v4"/><path d="M15 9a5 5 0 015 5v2h-2"/><circle cx="21" cy="17" r="2" fill="#fff" stroke="none"/></svg></div><div><div class="adv-title">專業落地<span class="en">Doctor-Led, Personalised Treatment Plans</span></div><p class="adv-desc">專科醫生 × 科學檢驗 × 國際認證營養師全程追蹤。每一份計劃都由醫療專業人員親自制定，真正做到個人化治療。</p></div></div>
