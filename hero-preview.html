@@ -238,6 +238,7 @@ nav{position:sticky;top:0;z-index:1000;background:var(--F);display:flex;align-it
 /* CASES */
 .cases-sec{background:var(--F);padding:80px 0}
 .cases-desc{font-size:13.5px;color:rgba(255,255,255,.6);max-width:640px;margin:12px auto 44px;line-height:1.8;text-align:center}
+.cases-swipe-hint{display:none}
 .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .case-card{background:rgba(255,255,255,.06);border-radius:var(--R);border:1px solid rgba(255,255,255,.12);overflow:hidden;transition:all .2s}
 .case-card:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
@@ -445,7 +446,7 @@ footer{background:var(--FD);padding:56px 0 32px;text-align:center}
     display:grid;
     grid-template-columns:none;
     grid-auto-flow:column;
-    grid-auto-columns:minmax(280px,84vw);
+    grid-auto-columns:minmax(268px,78vw);
     gap:14px;
     overflow-x:auto;
     overflow-y:hidden;
@@ -459,6 +460,27 @@ footer{background:var(--FD);padding:56px 0 32px;text-align:center}
   }
   .cases-grid::-webkit-scrollbar{display:none}
   .case-card{scroll-snap-align:start;scroll-snap-stop:always}
+  .cases-sec{padding:36px 0 28px}
+  .cases-sec .sec-title{margin-bottom:4px}
+  .cases-desc{font-size:12.5px;line-height:1.6;margin:6px auto 12px}
+  .cases-swipe-hint{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    width:max-content;max-width:100%;margin:0 auto 14px;padding:7px 16px;
+    border:1px solid rgba(126,216,184,.55);border-radius:999px;
+    background:rgba(126,216,184,.12);color:#9BE7CB;
+    font-size:12.5px;letter-spacing:.03em
+  }
+  .cases-swipe-hint strong{font-weight:700}
+  .cases-swipe-hint span{font-family:'DM Sans',sans-serif;font-size:24px;line-height:.7;animation:swipeHint 1.15s ease-in-out infinite alternate}
+  .cases-swipe-hint span:last-child{animation-direction:alternate-reverse}
+  .case-img{padding-bottom:68%}
+  .case-body{padding:11px 13px 14px}
+  .case-name{margin-bottom:7px}
+  .case-metrics{margin-bottom:7px}
+  .case-m{padding:7px 9px}
+  .case-desc{font-size:12px;line-height:1.5}
+  .cases-cta{margin-top:16px}
+  @keyframes swipeHint{from{transform:translateX(0);opacity:.65}to{transform:translateX(4px);opacity:1}}
   .article-cta{font-size:16px;padding:15px 32px}
   .video-copy{margin-top:36px;margin-bottom:18px}
   .video-copy p{font-size:13.5px;text-align:left}
@@ -696,6 +718,7 @@ footer{background:var(--FD);padding:56px 0 32px;text-align:center}
 <!-- 案例分享 -->
 <section id="cases" class="cases-sec page-slice slice-cases"><div class="container"><div class="center"><p class="sec-tag" style="color:#7ED8B8">Real Results</p><h2 class="sec-title" style="color:#fff;font-family:'Noto Serif TC',serif">案例分享</h2></div>
 <p class="cases-desc">Cofit 與台灣「初日診所」長期合作，已協助上萬名個案在不挨餓、不亂試的前提下，穩定改善體脂與健康指標。</p>
+<div class="cases-swipe-hint" aria-hidden="true"><span>‹</span><strong>左右滑動查看更多案例</strong><span>›</span></div>
 <div class="cases-grid">
   <div class="case-card"><div class="case-img"><img width="1000" height="1000" loading="lazy" decoding="async" src="./case1.jpg" alt="案例 馬小姐"><span class="case-badge">參加 2 期療程</span></div><div class="case-body"><div class="case-name">馬小姐｜21 歲</div><div class="case-metrics"><div class="case-m"><div class="case-m-lbl">腰圍</div><div class="case-m-val">−14.9<sup style="font-size:11px">cm</sup></div></div><div class="case-m"><div class="case-m-lbl">體重</div><div class="case-m-val">−15.9<sup style="font-size:11px">kg</sup></div></div></div><p class="case-desc">因錯誤飲食觀念，總是陷入復胖循環。現在吃飽飽也能瘦 15 公斤！</p></div></div>
   <div class="case-card"><div class="case-img"><img width="1000" height="1000" loading="lazy" decoding="async" src="./case2.jpg" alt="案例 古小姐"><span class="case-badge">參加 2 期療程</span></div><div class="case-body"><div class="case-name">古小姐｜32 歲</div><div class="case-metrics"><div class="case-m"><div class="case-m-lbl">腰圍</div><div class="case-m-val">−6.1<sup style="font-size:11px">cm</sup></div></div><div class="case-m"><div class="case-m-lbl">體重</div><div class="case-m-val">−10.3<sup style="font-size:11px">kg</sup></div></div></div><p class="case-desc">壓力、熬夜、甲狀腺失調讓體重失控，改善發炎問題後成功減重 10 公斤！</p></div></div>
